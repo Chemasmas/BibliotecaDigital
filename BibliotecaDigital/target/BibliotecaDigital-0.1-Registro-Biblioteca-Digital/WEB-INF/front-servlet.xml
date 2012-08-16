@@ -34,5 +34,24 @@
         <property name="password" value="dany12"/>
     </bean>
     
+    <bean id="mySessionSpring" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="mySQLSource" />
+        <propery name="annotatedClasses">
+            <list>
+                <value>org.programadoresjava.bibliotecadigital.models.Bitacora</value>
+                <value>org.programadoresjava.bibliotecadigital.models.Equipo</value>
+                <value>org.programadoresjava.bibliotecadigital.models.Personales</value>
+            </list>
+        </propery>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2dll.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <!--Aqui deben de empezar los Daos-->
     
 </beans>
