@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-ago-2012 22:36:45 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.programadoresjava.bibliotecadigital.controllers1.Equipos" table="equipos" catalog="mydb">
+        <id name="noSerie" type="string">
+            <column name="No_serie" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="marca" type="string">
+            <column name="Marca" length="45" not-null="true" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="Modelo" length="45" not-null="true" />
+        </property>
+        <property name="seleccionado" type="boolean">
+            <column name="Seleccionado" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="100" />
+        </property>
+        <set name="usuarioses" inverse="false" table="equipos_has_usuarios">
+            <key>
+                <column name="Equipos_No_serie" length="45" not-null="true" />
+            </key>
+            <many-to-many entity-name="org.programadoresjava.bibliotecadigital.controllers1.Usuarios">
+                <column name="Usuarios_No_IFE" length="20" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
