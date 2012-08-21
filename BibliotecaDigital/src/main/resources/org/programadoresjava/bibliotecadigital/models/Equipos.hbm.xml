@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20-ago-2012 22:53:03 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 20-ago-2012 22:58:13 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-    <class name="org.programadoresjava.bibliotecadigital.controllers1.Equipos" table="equipos" catalog="mydb">
+    <class name="org.programadoresjava.bibliotecadigital.models.Equipos" table="equipos" catalog="mydb">
         <id name="noSerie" type="string">
             <column name="No_serie" length="45" />
             <generator class="assigned" />
@@ -24,7 +24,7 @@
             <key>
                 <column name="Equipos_No_serie" length="45" not-null="true" />
             </key>
-            <many-to-many entity-name="org.programadoresjava.bibliotecadigital.controllers1.Usuarios">
+            <many-to-many entity-name="org.programadoresjava.bibliotecadigital.models.Usuarios">
                 <column name="Usuarios_No_IFE" length="20" not-null="true" />
             </many-to-many>
         </set>

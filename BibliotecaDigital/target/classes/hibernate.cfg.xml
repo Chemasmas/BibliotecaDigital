@@ -10,5 +10,11 @@
     <mapping resource="org/programadoresjava/bibliotecadigital/controllers1/Equipos.hbm.xml"/>
     <mapping resource="org/programadoresjava/bibliotecadigital/controllers1/Usuarios.hbm.xml"/>
     <mapping resource="org/programadoresjava/bibliotecadigital/controllers1/Bitacora.hbm.xml"/>
+    <mapping/>
+    <mapping/>
+    <mapping/>
+    <mapping resource="org/programadoresjava/bibliotecadigital/models/Bitacora.hbm.xml"/>
+    <mapping resource="org/programadoresjava/bibliotecadigital/models/Usuarios.hbm.xml"/>
+    <mapping resource="org/programadoresjava/bibliotecadigital/models/Equipos.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

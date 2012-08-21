@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20-ago-2012 22:53:03 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 20-ago-2012 22:58:13 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-    <class name="org.programadoresjava.bibliotecadigital.controllers1.Bitacora" table="bitacora" catalog="mydb">
-        <composite-id name="id" class="org.programadoresjava.bibliotecadigital.controllers1.BitacoraId">
+    <class name="org.programadoresjava.bibliotecadigital.models.Bitacora" table="bitacora" catalog="mydb">
+        <composite-id name="id" class="org.programadoresjava.bibliotecadigital.models.BitacoraId">
             <key-property name="idBitacora" type="int">
                 <column name="idBitacora" />
             </key-property>
@@ -12,7 +12,7 @@
                 <column name="Usuarios_No_IFE" length="20" />
             </key-property>
         </composite-id>
-        <many-to-one name="usuarios" class="org.programadoresjava.bibliotecadigital.controllers1.Usuarios" update="false" insert="false" fetch="select">
+        <many-to-one name="usuarios" class="org.programadoresjava.bibliotecadigital.models.Usuarios" update="false" insert="false" fetch="select">
             <column name="Usuarios_No_IFE" length="20" not-null="true" />
         </many-to-one>
         <property name="fechaEntrada" type="timestamp">
